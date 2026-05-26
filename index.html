@@ -104,8 +104,13 @@ body::before {
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 500; height: 145px; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; transition: background .4s, border-color .4s, backdrop-filter .4s; border-bottom: 1px solid transparent; }
 nav.scrolled { background: rgba(6,6,8,.95); backdrop-filter: blur(15px); border-color: var(--line); }
 .logo { display: flex; align-items: center; justify-content: flex-start; }
-.logo img { height: 125px; width: auto; object-fit: contain; filter: brightness(1.2); transition: transform .3s; }
-.logo:hover img { transform: scale(1.05); }
+.logo img { 
+  height: 170px; 
+  width: auto; 
+  object-fit: contain; 
+  filter: brightness(1.2); 
+  transition: transform .3s; 
+}.logo:hover img { transform: scale(1.05); }
 
 .nav-links, .nav-cta { display: none; }
 .ham { display: flex; flex-direction: column; gap: 5px; padding: 8px; background: none; border: none; z-index: 501; }
@@ -373,7 +378,7 @@ footer { background: var(--dark2); border-top: 1px solid var(--line); padding: 5
 @media (min-width: 768px) {
   .sec { padding: 90px 6%; } 
   nav { padding: 0 6%; height: 155px; } 
-  .logo img { height: 135px; } 
+  .logo img { height: 185px; } 
   .hero { background-attachment: fixed; padding-top: 155px; }
   
   .scroll-track-mob { display: grid; margin: 0; padding: 0; overflow: visible; }
@@ -416,7 +421,7 @@ footer { background: var(--dark2); border-top: 1px solid var(--line); padding: 5
 @media (min-width: 1024px) {
   .sec { padding: 110px 8%; } 
   nav { height: 175px; padding: 0 8%; } 
-  .logo img { height: 155px; } 
+  .logo img { height: 220px; } 
   .ham { display: none; }
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a { font-family: var(--font-ui); font-size: 12px; font-weight: 700; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; transition: color .2s; position: relative; }
@@ -472,7 +477,7 @@ footer { background: var(--dark2); border-top: 1px solid var(--line); padding: 5
   <a href="https://wa.me/917838355692?text=Hi%2C%20I%20am%20interested%20in%20joining%20FytBox!" target="_blank" class="float-btn float-wa" aria-label="WhatsApp">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
   </a>
-  <a href="https://instagram.com/fytboxonline" target="_blank" class="float-btn float-ig" aria-label="Instagram">
+  <a href="https://www.instagram.com/fytbox.in" target="_blank" class="float-btn float-ig" aria-label="Instagram">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
   </a>
 </div>
@@ -480,7 +485,7 @@ footer { background: var(--dark2); border-top: 1px solid var(--line); padding: 5
 <div id="splash">
   <div class="splash-logo-container">
     <div class="splash-glow"></div>
-    <img src="logo.png" alt="FytBox Logo" class="splash-logo-img">
+    <img src="logo1.png" alt="FytBox Logo" class="splash-logo-img">
   </div>
 </div>
 
@@ -497,7 +502,7 @@ footer { background: var(--dark2); border-top: 1px solid var(--line); padding: 5
 
 <nav id="nav">
   <a href="#" class="logo">
-    <img src="logo.png" alt="FytBox Logo"> 
+    <img src="logo1.png" alt="FytBox Logo"> 
   </a>
   <ul class="nav-links">
     <li><a href="#programs">Classes</a></li>
@@ -722,7 +727,7 @@ footer { background: var(--dark2); border-top: 1px solid var(--line); padding: 5
       <div style="font-size:64px; margin-bottom: 16px; filter: drop-shadow(0 0 15px rgba(240,153,4,0.4));">👑</div>
       <h3>Winners Featured on <em>Instagram!</em></h3>
       <p>The best challenge entries each week get spotlighted on our official page — right in front of 500+ motivated women. It's your time to shine!</p>
-      <a class="insta-btn" href="https://instagram.com/fytboxonline" target="_blank">📸 Follow @fytboxonline</a>
+      <a class="insta-btn" href="https://www.instagram.com/fytbox.in" target="_blank">📸 Follow @fytbox.in</a>
     </div>
   </div>
 </section>
@@ -742,11 +747,11 @@ footer { background: var(--dark2); border-top: 1px solid var(--line); padding: 5
   <div class="ft-grid">
     <div>
       <div class="ft-brand-logo">
-        <img src="logo.png" alt="FytBox Logo" style="height: 50px; width: auto; object-fit: contain;">
+        <img src="logo1.png" alt="FytBox Logo" style="height: 50px; width: auto; object-fit: contain;">
       </div>
       <p class="ft-desc">India's most energetic online Zumba platform for women. Dance, sweat, and transform from wherever you are in the world.</p>
       <div class="ft-soc">
-        <a class="ft-s" href="https://instagram.com/fytboxonline" target="_blank" aria-label="Instagram">
+        <a class="ft-s" href="https://www.instagram.com/fytbox.in" target="_blank" aria-label="Instagram">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
         <a class="ft-s" href="https://wa.me/917838355692" target="_blank" aria-label="WhatsApp">
@@ -761,7 +766,7 @@ footer { background: var(--dark2); border-top: 1px solid var(--line); padding: 5
     <div>
       <div class="ft-col-t">Company</div>
       <ul class="ft-links">
-        <li><a href="https://instagram.com/fytboxonline" target="_blank">@fytboxonline</a></li>
+        <li><a href="https://www.instagram.com/fytbox.in" target="_blank">@fytboxonline</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#blog">Blog</a></li>
       </ul>
