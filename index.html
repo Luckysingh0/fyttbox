@@ -139,9 +139,20 @@ nav.scrolled { background: #ffffff; border-bottom: 1px solid rgba(0,0,0,0.1); bo
    HERO SECTION
    ========================================== */
 .hero { 
-  min-height: 100vh; display: grid; grid-template-columns: 1fr; position: relative; overflow: hidden; 
-  background-image: url('100.jpeg');
-  background-size: cover; background-position: center; background-attachment: fixed; margin-top: 75px; background-repeat: no-repeat;
+  min-height: 100vh; 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  position: relative; 
+  overflow: hidden; 
+  background-color: #111;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.35)),
+    url('mainco.png');
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  margin-top: 75px;
 }
 .blob { position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none; opacity: 0.4; mix-blend-mode: screen; }
 .b1 { width: 300px; height: 300px; background: rgba(240,153,4,.3); top: -50px; right: -50px; }
@@ -349,15 +360,6 @@ footer { background: linear-gradient(180deg, #ffffff 0%, rgba(255,245,248,0.8) 1
 .ft-copy em { font-style: normal; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; }
 
 /* ==========================================
-   CONSENT BANNER 
-   ========================================== */
-.consent-banner { position: fixed; bottom: -150%; left: 5%; right: 5%; background: rgba(255,255,255,0.95); backdrop-filter: blur(6px); border: 1px solid rgba(0,0,0,0.06); border-radius: 12px; padding: 20px; z-index: 9990; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 10px 40px rgba(16,24,40,0.06); transition: bottom 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-.consent-banner.show { bottom: 24px; }
-.consent-text { font-size: 13px; color: rgba(0,0,0,0.8); line-height: 1.5; }
-.consent-text a { color: var(--primary); text-decoration: underline; cursor: pointer; font-weight: 600; }
-.consent-btn { background: var(--grad); color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-family: var(--font-ui); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; align-self: flex-end; }
-
-/* ==========================================
    MODALS (T&C and PRIVACY)
    ========================================== */
 .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 100000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; padding: 5%; }
@@ -415,9 +417,6 @@ footer { background: linear-gradient(180deg, #ffffff 0%, rgba(255,245,248,0.8) 1
   .ft-brand-logo, .ft-soc { justify-content: flex-start; }
   .ft-bottom { flex-direction: row; justify-content: space-between; }
   
-  /* Desktop Banner alignment */
-  .consent-banner { left: auto; right: 24px; max-width: 400px; flex-direction: row; align-items: center; justify-content: space-between; }
-  .consent-btn { align-self: center; }
 }
 
 @media (min-width: 1024px) {
@@ -468,15 +467,6 @@ footer { background: linear-gradient(180deg, #ffffff 0%, rgba(255,245,248,0.8) 1
 </style>
 </head>
 <body>
-
-<div class="consent-banner" id="consentBanner">
-  <div class="consent-text">
-    We value your privacy. We use cookies to enhance your experience. By using FytBox, you agree to our 
-    <a onclick="openModal('termsModal')">Terms & Conditions</a> and 
-    <a onclick="openModal('privacyModal')">Privacy Policy</a>.
-  </div>
-  <button class="consent-btn" onclick="closeConsent()">I Agree</button>
-</div>
 
 <div class="float-soc">
   <a href="https://wa.me/917838355692?text=Hi%2C%20I%20am%20interested%20in%20joining%20FytBox!" target="_blank" class="float-btn float-wa" aria-label="WhatsApp">
@@ -907,15 +897,6 @@ footer { background: linear-gradient(180deg, #ffffff 0%, rgba(255,245,248,0.8) 1
 </div>
 
 <script>
-/* CONSENT BANNER LOGIC (Shows shortly after splash screen) */
-setTimeout(() => {
-  document.getElementById('consentBanner').classList.add('show');
-}, 4500); 
-
-function closeConsent() {
-  document.getElementById('consentBanner').classList.remove('show');
-}
-
 /* SPLASH REMOVAL */
 setTimeout(() => {
   const splash = document.getElementById('splash');
